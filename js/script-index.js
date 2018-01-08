@@ -3,7 +3,7 @@ $(document).ready( function(){
 	$('.js-back').hide();//oculta flecha de back en index
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
-
+    renderActivities(activitiesArray);
 });
 
 //funcion para agregar texto nuevas recetas al parrafo en index (funciono solo llamando la funcion)
@@ -43,13 +43,21 @@ function renderRecipe(recipe) {
 	console.log('Voy a pintar la receta: ', recipe);   
 }
 
-
-
 /*
 * Función que se encarga de pintar todas las actividades
 */
 function renderActivities(activitiesArray) {
+
 	console.log('Activities: ', activitiesArray);
+    
+
+    for(var i = 0; i < activitiesArray.length; i++){
+        renderActivity(activitiesArray[i]);
+        
+    }
+    if(activitiesArray.length > 0){
+        $('.wrapper-message').hide();
+    }
 }
 
 /*

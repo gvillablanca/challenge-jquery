@@ -6,6 +6,12 @@ $(document).ready( function(){
 
 });
 
+//funcion para agregar texto nuevas recetas al parrafo en index (funciono solo llamando la funcion)
+function printNews(){
+	$('#new-recipes').text('NUEVAS RECETAS');
+}
+printNews();
+
 
 /*
 * Función que se encarga de pintar TODAS las recetas que tengan 
